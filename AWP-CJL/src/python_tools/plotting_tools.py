@@ -183,10 +183,11 @@ def plot_reference_frames( frames, args, vectors = [], plots = [], planes = [] )
 	if _args[ 'no_axes' ]:
 		ax.set_axis_off()
 
+	# Edited from 'ax.w_xaxis...' to 'ax.xaxis' for all axes to fix AttributeError
 	if _args[ 'axes_no_fill' ]:
-		ax.w_xaxis.pane.fill = False
-		ax.w_yaxis.pane.fill = False
-		ax.w_zaxis.pane.fill = False
+		ax.xaxis.pane.fill = False
+		ax.yaxis.pane.fill = False
+		ax.zaxis.pane.fill = False
 
 	if _args[ 'azimuth' ] is not None:
 		ax.view_init( elev = _args[ 'elevation' ],
@@ -315,10 +316,11 @@ def plot_orbits( rs, args, vectors = [] ):
 		ax.view_init( elev = _args[ 'elevation' ],
 					  azim = _args[ 'azimuth'   ] )
 	
+	# Edited from 'ax.w_xaxis...' to 'ax.xaxis' for all axes to fix AttributeError
 	if _args[ 'axes_no_fill' ]:
-		ax.w_xaxis.pane.fill = False
-		ax.w_yaxis.pane.fill = False
-		ax.w_zaxis.pane.fill = False		
+		ax.xaxis.pane.fill = False
+		ax.yaxis.pane.fill = False
+		ax.zaxis.pane.fill = False		
 
 	if _args[ 'hide_axes' ]:
 		ax.set_axis_off()
@@ -952,10 +954,11 @@ def plot_cr3bp_3d( mu, rs, args, vectors = [] ):
 		ax.view_init( elev = _args[ 'elevation' ],
 					  azim = _args[ 'azimuth'   ] )
 
+	# Edited from 'ax.w_xaxis...' to 'ax.xaxis' for all axes to fix AttributeError
 	if _args[ 'axes_no_fill' ]:
-		ax.w_xaxis.pane.fill = False
-		ax.w_yaxis.pane.fill = False
-		ax.w_zaxis.pane.fill = False
+		ax.xaxis.pane.fill = False
+		ax.yaxis.pane.fill = False
+		ax.zaxis.pane.fill = False
 
 	if _args[ 'hide_axes' ]:
 		ax.set_axis_off()

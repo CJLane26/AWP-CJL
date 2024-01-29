@@ -67,8 +67,10 @@ city_list0 = [
 	 'Akure'                                # Nigeria
 ]
 
+
 def city_dict():
-	with open( WORLD_CITIES_FILE, 'r' ) as f:
+	# Added 'ncoding="utf8"' to open to fix UnicodeDecodeError
+	with open( WORLD_CITIES_FILE, 'r', encoding="utf8" ) as f:
 		lines = f.readlines()
 
 	header = lines[ 0 ]

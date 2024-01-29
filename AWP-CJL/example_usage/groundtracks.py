@@ -11,6 +11,10 @@ groundtracks
 from numpy import arange
 import spiceypy as spice
 
+# Add AWP libraries to path
+from sys import path
+path.append("H:\Coding\Python\AWP_CJL\AWP-CJL\src\python_tools")
+
 # AWP libraries
 from Spacecraft import Spacecraft as SC
 import numerical_tools as nt

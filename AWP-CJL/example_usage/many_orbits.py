@@ -7,8 +7,9 @@ Many orbits script
 '''
 
 # Python standard libraries
+# Add AWP libraries to path
 from sys import path
-path.append( '../src/python_tools' )
+path.append("H:\Coding\Python\AWP_CJL\AWP-CJL\src\python_tools")
 
 # AWP libraries
 from Spacecraft import Spacecraft as SC
